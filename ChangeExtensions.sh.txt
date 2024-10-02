@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo "Number of arguments: $#" 
+echo ""
+
+if [ $# != 2 ] 
+then
+        echo "Error: This script requires two arguments" 
+        exit 1
+fi
+
+orig_ext=$1
+target_ext=$2
+echo "Original extension: $1" 
+echo "Target extension: $2" 
+echo ""
+
+num_matches=`ls *.$orig_ext | wc -l` 
+
+echo "Number of matches: $num_matches"
+
+if [ $num_matches = 0 ] 
+then
+        echo "Error: no files found with the $orig_ext extension."
+        exit 1
+fi
+
+ls *.$1 | while read file
+do
+        name=`basename $file $orig_ext`
+        new_file=$name$target_ext
+        echo "Going to run mv file $new_file"
+        mv $file $new_file
+done
+
+echo "Done"

@@ -1,0 +1,3 @@
+cd LabTask2
+mkdir IveGotRights
+chmod 751 IveGotRights

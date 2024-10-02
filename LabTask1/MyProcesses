@@ -1,0 +1,4 @@
+The program's parent process is the command shell. 
+That proccess' parent process is systemd, also known as the init process. 
+Finally, that process' parent process is proccess 0, which becomes the swapper 
+process. 

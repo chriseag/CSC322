@@ -1,0 +1,10 @@
+mkdir LabTask2
+cd LabTask2
+mkdir Originals
+vim HardStuff
+vim SoftStuff
+cd ..
+mkdir Links
+cd Links
+ln /Users/chriseagar/LabTask2/Originals/HardStuff LinkToHardStuff
+ln -s /Users/chriseagar/LabTask2/Originals/SoftStuff RelativeToSoftStuff

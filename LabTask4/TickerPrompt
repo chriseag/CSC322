@@ -1,0 +1,2 @@
+cp ../Ticker.c .
+gcc -Wall -o Ticker Ticker.c

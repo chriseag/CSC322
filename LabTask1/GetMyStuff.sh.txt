@@ -1,0 +1,12 @@
+echo 'User ID:'
+id -u
+echo 'Group ID:'
+id -g
+echo 'Groups:'
+groups
+echo 'Absolute path of tcsh shell:'
+which tcsh
+echo 'Absolute path of home directory:'
+echo $HOME
+echo 'PATH enivronment variable:'
+echo $PATH
